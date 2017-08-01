@@ -9,8 +9,22 @@ from log_module import log
 
 driver_init()
 
-sleep(5)
-
-log('[featured_today_special][start]')
+delay()
+# play
 featured_today_special()
-log('[featured_today_special][end]')
+
+# open setting
+menu()
+delay()
+menu_setting()
+scroll_down()
+scroll_up()
+delay()
+back()
+
+# open Notification
+menu()
+delay()
+menu_notification()
+delay()
+back()

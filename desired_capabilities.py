@@ -21,3 +21,4 @@ acc = '0937394494'
 pwd = '1qaz2WSX3edc'
 
 # appium --session-override --command-timeout 72000000 --no-reset
+# /Users/yuhsuan/Library/Android/sdk/tools/emulator -netdelay none -netspeed full -avd Nexus_5_API_23
