@@ -12,6 +12,8 @@ from appium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from appium.webdriver.common.touch_action import TouchAction
 
 from log_module import log
 from desired_capabilities import desired_caps
@@ -39,6 +41,7 @@ def driver_init():
 def menu():
     log('[menu][start]')
     driver.find_element_by_accessibility_id('Open drawer').click()
+    # driver.find_element_by_accessibility_id('打開主選單').click()
     log('[menu][end]')
 
 
@@ -89,7 +92,21 @@ def menu_my_library_cplaylist():
 def menu_discover():
     log('[menu_discover][start]')
     driver.find_element_by_accessibility_id('Discover').click()
+    # driver.find_element_by_accessibility_id('發現').click()
     log('[menu_discover][end]')
+
+# Menu -> Discover -> Search
+def menu_discover_search():
+    log('[menu_discover_search][start]')
+    driver.find_element_by_accessibility_id('Search').click()
+    # driver.find_element_by_accessibility_id('線上搜尋').click()
+    log('[menu_discover_search][end]')
+
+def menu_discover_search_input(text):
+    log('[menu_discover_search_input][start]')
+    el = driver.find_element_by_id('com.skysoft.kkbox.android:id/search_plate')
+    el.send_keys(text)
+    log('[menu_discover_search_input][end]')
 
 # Menu -> Discover -> FEATURED
 def menu_discover_featured():
@@ -242,3 +259,29 @@ def wait(type=None,el=None,time=None):
 # People
 # Setting
 # Notification
+
+
+def press(element):
+    driver.find_element_by_id(element).click()
+    log('[press] ' + element + 'done')
+
+def play_pause(type):
+    status = None
+    el = None
+    try:
+        el = driver.find_element_by_accessibility_id('開始播放')
+        status = 'stop'
+        log('[play_pause] music is stopping...')
+    except:
+        status = 'playing'
+        el = driver.find_element_by_accessibility_id('暫停播放')
+        log('[play_pause] music is playing...')
+
+    if type =='stop' and status =='playing':
+        log('[play_pause] stop music')
+        el.click()
+    elif type =='play' and status =='stop':
+        log('[play_pause] play music')
+        el.click()
+    else:
+        pass
