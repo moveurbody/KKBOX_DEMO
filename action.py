@@ -285,3 +285,74 @@ def play_pause(type):
         el.click()
     else:
         pass
+
+'''
+
+def player():
+    縮小播放介面
+    com.skysoft.kkbox.android: id / view_navigation_arrow
+    # 上方的提示
+    com.skysoft.kkbox.android: id / label_nowplaying_title
+
+    音質選擇
+    com.skysoft.kkbox.android: id / button_nowplaying_audio_quality
+    更多操作選項
+    com.skysoft.kkbox.android: id / button_nowplaying_overflow
+    # 專輯封面
+    com.skysoft.kkbox.android: id / view_nowplaying_album_cover
+
+    # 歌曲名
+    com.skysoft.kkbox.android: id / label_nowplaying_song_name
+    # 專輯名稱
+    com.skysoft.kkbox.android: id / label_nowplaying_artist_name
+
+    加入到新歌單
+    com.skysoft.kkbox.android: id / button_nowplaying_add_to_playlist
+    加入我的最愛, 未加入
+    com.skysoft.kkbox.android: id / button_favorite
+    Lyrics
+    com.skysoft.kkbox.android: id / button_nowplaying_lyrics
+
+
+    歌單重複播放
+    com.skysoft.kkbox.android: id / button_nowplaying_control_repeat
+    單曲重複播放
+    com.skysoft.kkbox.android: id / button_nowplaying_control_repeat
+    不重複播放
+    com.skysoft.kkbox.android: id / button_nowplaying_control_repeat
+
+    播放前一首
+    com.skysoft.kkbox.android:id/button_nowplaying_control_prev
+
+    開始播放
+    com.skysoft.kkbox.android:id/button_nowplaying_play_pause
+    暫停播放
+    com.skysoft.kkbox.android: id / button_nowplaying_play_pause
+
+    播放下一首
+    com.skysoft.kkbox.android:id/button_nowplaying_control_next
+
+    循序播放
+    com.skysoft.kkbox.android:id/button_nowplaying_control_random
+    隨機播放
+    com.skysoft.kkbox.android: id / button_nowplaying_control_random
+
+
+    # 目前播放
+    com.skysoft.kkbox.android: id / label_current_time
+    # 總時數
+    com.skysoft.kkbox.android: id / label_total_time
+    # SEEK Bar
+    com.skysoft.kkbox.android: id / seekbar
+
+    # 點選專輯封面跳出來的資料
+    android.widget.LinearLayout
+    com.skysoft.kkbox.android: id / layout_nowplaying_menu_album
+    com.skysoft.kkbox.android: id / layout_nowplaying_menu_artist
+    com.skysoft.kkbox.android: id / layout_nowplaying_menu_nowplaying_list
+    com.skysoft.kkbox.android: id / layout_nowplaying_menu_station
+    com.skysoft.kkbox.android: id / layout_nowplaying_menu_share
+    com.skysoft.kkbox.android: id / layout_nowplaying_menu_follow
+    com.skysoft.kkbox.android: id / button_nowplaying_menu_cancel
+    
+'''
